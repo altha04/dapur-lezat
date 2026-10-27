@@ -1,0 +1,269 @@
+**Kode CSS — style.css**
+
+```css
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf5;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #572c2c, #a65d5d);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #ffe6d5;
+}
+
+/* NAVIGASI */
+.navbar {
+    background-color: #3e2525;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc99;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(35, 20, 20, 0.65),
+            rgba(35, 20, 20, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.label {
+    color: #ffd5a5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.label) {
+    margin-bottom: 30px;
+}
+
+/* TOMBOL */
+.button,
+.order-button {
+    display: inline-block;
+    background-color: #a65d5d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover,
+.order-button:hover {
+    background-color: #783d3d;
+    transform: translateY(-2px);
+}
+
+/* TENTANG KAMI */
+.about {
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.about h2,
+.products h2,
+.contact h2 {
+    font-size: 30px;
+    color: #783d3d;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #666666;
+}
+
+/* PRODUK */
+.products {
+    background-color: #f6eee8;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.subtitle {
+    color: #777777;
+    margin-bottom: 35px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+/* KARTU PRODUK */
+.product-card {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    font-size: 22px;
+    color: #783d3d;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.product-info h4 {
+    color: #a65d5d;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.order-button {
+    font-size: 13px;
+    padding: 10px 15px;
+}
+
+/* KONTAK */
+.contact {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.contact p {
+    color: #666666;
+}
+
+.contact-note {
+    margin-top: 12px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #3e2525;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 13px;
+}
+
+/* TAMPILAN HP DAN TABLET */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .product-card img {
+        height: 230px;
+    }
+}
+```
